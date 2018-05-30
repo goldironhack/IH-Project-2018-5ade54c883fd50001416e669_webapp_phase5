@@ -1,9 +1,149 @@
-body {
-    color: #444;
-    font-family: Arial, sans-serif;
+/*
+  Variables
+*/
+:root {
+  --dark-primary-color: #0097A7;
+  --light-primary-color: #B2EBF2;
+  --primary-color: #009cb0;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #FF5722;
+  --divider-color: #BDBDBD;
+  --text-icons-color: #FFFFFF;
+  --border-color: #CDDC39;
+}
+/*
+############ General ########################3
+*/
+body{
+  background-color: var(--light-primary-color);
 }
 
-.container {
-    width: 100%;
-    max-width: 960px;
+span{
+  color: var(--primary-text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 130% !important;
+}
+
+nav{
+  font-family: 'Fjalla One', sans-serif;
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  height: auto;
+  padding: 0;
+}
+
+tr, td{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+
+}
+
+th{
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+}
+
+/*
+############ Clases ########################3
+*/
+
+.reponsive-table{
+  margin: auto;
+  margin-top: 1%;
+}
+
+.span-check{
+  width: 15rem;
+}
+
+.reponsive-table{
+  width: 90%;
+}
+
+.divider{
+  height: 3px;
+  background-color: var(--divider-color);
+}
+
+.page-footer{
+  background-color: var(--primary-color);
+}
+
+/*
+############ Especifico (IDs) ########################3
+*/
+
+#P-title{
+  margin: auto;
+}
+
+#main-container{
+  width: 100%;
+  padding-top: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-bottom: 1%;
+}
+
+#map{
+  width: 100%;
+  height: 400px;
+  border-radius: 1rem;
+}
+
+#BT_actualizar{
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--accent-color);
+  width: 70%;
+  margin-top: 10%;
+  margin-left: 15%;
+  border-radius: 5rem;
+}
+
+#BT_eliminar{
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--accent-color);
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 15%;
+  border-radius: 5rem;
+  margin-bottom: 5%;
+}
+
+#form-params{
+  background-color: var(--text-icons-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6%;
+  border-radius: 15px;
+  width: autos;
+}
+
+#columna-mapa{
+  border-radius: 1rem;
+  padding: 0.3rem;
+  background-color: var(--text-icons-color);
+}
+
+#columna-parametros{
+  margin: auto;
+}
+
+#columna-tabla{
+  margin: auto;
+}
+
+#row-ranking{
+  margin-top: 1%;
+}
+
+#BT_descargarT{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--accent-color);
+    margin-bottom: 1%;
+}
+
+#parrafo-tabla{
+  color: var(--primary-text-color);
 }

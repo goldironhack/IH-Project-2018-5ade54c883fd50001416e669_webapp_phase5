@@ -1,15 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no"/>
+
+    <title>This is not Trivago</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/148/148845.svg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid" id="contenedor-nav">
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center "><p class="flow-text" id="P-title">This is not Trivago</p></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#ranking">Ranking</a></li>
+              <li><a href="#graficos">Gráficos</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#ranking">Ranking</a></li>
+        <li><a href="#graficos">Gráficos</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </div>
-    <script src="index.js"></script>
-</body>
+
+    <div class="container-fluid" id="main-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col s12 m6 l4" id="columna-parametros">
+            <div class="input-field col s12">
+              <select multiple>
+                <option value="" disabled selected>Please choose one or more Neighborhoods  </option>
+                <option value="1">Bronx</option>
+                <option value="2">Brooklyn</option>
+                <option value="3">Manhattan</option>
+                <option value="4">Queens</option>
+                <option value="5">Staten Island</option>
+              </select>
+            </div>
+            <div class="section">
+              <form class="z-depth-1" action="#" id="form-params">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span class="span-check">Safety</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span class="span-check">Distance to SSB</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span class="span-check">Affordability</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span class="span-check">Bars</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in" />
+                    <span class="span-check">Shopping centers</span>
+                  </label>
+                </p>
+              </form>
+
+              <a class="waves-effect waves-light lighten-2 btn z-depth-2" id="BT_actualizar"><i class="material-icons left">sync</i>UPDATE MAP</a>
+              <a class="waves-effect waves-light lighten-2 btn z-depth-2" id="BT_eliminar"><i class="material-icons left">clear</i>DELETE FILTERS</a>
+
+            </div>
+          </div>
+          <div class="col s12 m6 l8 z-depth-1" id="columna-mapa">
+            <div id="map">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider z-depth-1"></div>
+
+      <a name="ranking" id="ranking"></a>
+      <div class="container-fluid">
+
+        <div class="row" id="row-ranking">
+
+          <div class="col m6 l4 s12">
+            <h5>The best places in NYC</h5>
+            <p class="grey-textx text-darken-2" id="parrafo-tabla">If you are a student
+              at NYU Stern School of Business and want find an area to live, here
+              are the 3 best places to live in NYC, the factors you selected above have been taken into
+              account to generate the ranking. You can download these data doing click in button: "Download table".</p>
+            <a class="btn waves-effect waves-light lighten-2" id="BT_descargarT">DOWNLOAD TABLE</a>
+          </div>
+
+          <div class="col s12 m6 l8" id="columna-tabla">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="https://image.flaticon.com/icons/svg/188/188234.svg" alt="" class="circle">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                   Second Line
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item avatar">
+              <img src="https://image.flaticon.com/icons/svg/188/188235.svg" alt="" class="circle">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                   Second Line
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <img src="https://image.flaticon.com/icons/svg/188/188236.svg" alt="" class="circle">
+                <span class="title">Title</span>
+                <p>First Line <br>
+                   Second Line
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider z-depth-1"></div>
+
+      <a name="graficos" id="graficos"></a>
+
+      <div class="container-fluid">
+
+      </div>
+
+      <div class="divider z-depth-1"></div>
+
+      <a name="about" id="about"></a>
+
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">THIS IS NOT TRIVAGO</h5>
+              <p class="grey-text text-lighten-4">
+                This application is a mashup that was designed for the Ironhacks challenge 2018 of the Pordue University.
+              </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Alejandro Sebastian Alejo Patarroyo</h5>
+              <ul>
+                <li >
+                  <a href="https://www.facebook.com/alejosebasp" target="_blank">
+                    <img height="25" src="https://codigofacilito.com/assets/icons/social/facebook-7e2b47879a1a26682cb766dbf1f3fe9006b9fe5205777fe8f58335b3f8f8cf07.png" alt="Facebook" /></a>
+                  <a href="https://twitter.com/alejosebasp" target="_blank">
+                    <img height="25" src="https://codigofacilito.com/assets/icons/social/twitter-0cc5c06eac25a980138f7983ab699b5cd2f7e3548184e1b978560cb1aa501ab8.png" alt="Twitter" /></a>
+                  <a href="mailto:alsalejopa@unal.edu.co" target="_blank">
+                    <img height="25" width="25" src="https://image.ibb.co/bZzp8y/iconmonstr_email_11_32.png" alt="E-mail" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2018 Alejosebasp, all rights reserved
+          </div>
+        </div>
+      </footer>
+  </body>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="index.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosAHLdu4qB2IFeQ3b0lB38pSO0QQtwu0&callback=initMap">
+  </script>
 </html>
